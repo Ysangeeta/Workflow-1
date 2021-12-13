@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row" style="padding-top:40px;">
+        <div class="col-sm-1">
+            <label style="margin-top:5px;">Select User</label>
+        </div>
+        <div class="col-md-2">
+            <select class="form-control" id="userid" (change)="showData($event,j)">
+                <option value="">Select User</option>
+                <option *ngFor="let item of userName" [value]="item">{{item}}</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="inputEmail4">Total Commit</label>
+                        <input type="text" class="form-control" id="commit_id" [(ngModel)]="commits" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputPassword4">Total Pass</label>
+                        <input type="text" class="form-control" id="pass_id" [(ngModel)]="pass" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputPassword4">Total Fail</label>
+                        <input type="text" class="form-control" id="fail_id" [(ngModel)]="fail" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputPassword4">Pass Rate</label>
+                        <input type="text" class="form-control" id="rate_id" [(ngModel)]="rate" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputPassword4">Avg time</label>
+                        <input type="text" class="form-control" id="avg_id" [(ngModel)]="avg" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
